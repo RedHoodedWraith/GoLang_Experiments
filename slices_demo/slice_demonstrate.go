@@ -1,5 +1,9 @@
 package main
 
+/*
+Doing Exercise 18 from 'A Tour of Go': https://go.dev/tour/moretypes/18
+*/
+
 import "golang.org/x/tour/pic"
 
 func Pic(dx, dy int) [][]uint8 {
