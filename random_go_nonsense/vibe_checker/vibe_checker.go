@@ -7,7 +7,7 @@ import (
 
 var vibe bool
 
-func checkVibe() bool {
+func CheckVibe(vibe bool) bool {
 	vw := "failed"
 	if vibe {
 		vw = "passed"
@@ -15,6 +15,10 @@ func checkVibe() bool {
 
 	fmt.Printf("You %s the vibe test\n", vw)
 	return vibe
+}
+
+type VibeCheckable interface {
+	checkVibe() bool
 }
 
 // RunVibeChecker
@@ -28,5 +32,5 @@ func RunVibeChecker() {
 	}
 	vibe = vibe_state_input == "yes"
 
-	checkVibe()
+	CheckVibe(vibe)
 }
