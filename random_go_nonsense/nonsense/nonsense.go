@@ -15,10 +15,11 @@ func NotEnoughMsg(task_name string) {
 }
 
 func main() {
-
+	// There is package called "flag" which is really good for command line arguments practice. Check it out.
 	numargs := len(os.Args)
 
 	if numargs < min_args {
+		// You could practice returning errors here too (e.g. implementing interface that has error() method in it.
 		NotEnoughMsg("Anything Here")
 		return
 	}

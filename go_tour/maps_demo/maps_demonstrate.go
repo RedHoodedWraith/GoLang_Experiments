@@ -7,6 +7,7 @@ import (
 )
 
 func WordCount(s string) map[string]int {
+	// Go convention is to use CamelCase instead of snake_case
 	all_strs := strings.Fields(s)
 	the_map := make(map[string]int)
 

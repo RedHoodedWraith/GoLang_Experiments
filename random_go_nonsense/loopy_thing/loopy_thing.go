@@ -1,6 +1,9 @@
 package loopy_thing
 
 import (
+	// Best practice for package names in Go is using single words (no underscore, dash, or CamelCase).
+	// https://go.dev/doc/effective_go#:~:text=By%20convention%2C%20packages%20are%20given,will%20be%20typing%20that%20name.
+	// Example of go package names: https://github.com/kubernetes/kubernetes/tree/master/pkg
 	"GoLang_Experiments/random_go_nonsense/vibe_checker"
 	"fmt"
 )
@@ -21,12 +24,15 @@ func (th *Thing) printThing() {
 	fmt.Println(th)
 }
 
+// For methods returning boolean, best practice is to use isVibe or hasVibe
+// Moreover CheckVibe is actually print something so it is better to use PrintVibe name.
 // Demonstrates using an interface function
 func (th *Thing) checkVibe() bool {
 	fmt.Printf("\nVibe Check: Does %s pass the Vibe Test?\n\t%s, ", th.name, th.name)
 	return vibe_checker.CheckVibe(th.canon)
 }
 
+// It is more common to use SetThing for setters
 func (th *Thing) UpdateThing(new_num int, new_name string, new_fake_state bool) {
 	th.number = new_num
 	th.name = new_name
@@ -37,6 +43,11 @@ func (th *Thing) updateNumber(new_num int) {
 	th.UpdateThing(new_num, fmt.Sprintf("Thing %v", new_num), th.canon)
 }
 
+// This function is essentially a setter (set value) in which case it is more common to use setThingCannon as a name with value
+// https://go.dev/doc/effective_go#Getters
+// Or for boolean variables it can be two methods, like: enableThingCannon/disableThingCannon or setThingCannon/unsetThingCannon (there is no convention for booleans, just common practice_
+// Also always keep in mind that private/public methods in Go are defined by lower/uppercase of first letter, so makeThingCannon means you will use it only inside package, and MakeThingCannon means it is intended to be used by other packages.
+// Also "make" is memory allocation keyword in Go, so using this word might lead to confusion for others.
 func (th *Thing) makeThingCanon() {
 	th.canon = true
 }
@@ -45,6 +56,10 @@ func (th *Thing) makeThingNotCanon() {
 	th.canon = false
 }
 
+// This is essentially constructor - method that generates new object
+// Naming convention for it is NewThing
+// https://go.dev/doc/effective_go#composite_literals
+// Also upper or lower case of first letter is important here
 func makeThing(number int, name string, canon bool) *Thing {
 	return &Thing{number, name, canon}
 }
