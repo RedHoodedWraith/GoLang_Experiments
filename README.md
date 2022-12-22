@@ -1,6 +1,6 @@
 # GoLang Experiments
 
-Asami De Almeida
+By Asami De Almeida
 
 ## Introduction
 
@@ -9,6 +9,9 @@ This was done as part of my upskilling at Loyalty New Zealand.
 Everything in [go_tour] is code from my exercise attempts from *[A Tour of Go](https://go.dev/tour)*.
 
 The rest is my own code.
+
+## Compiling Go
+Follow [these instructions](https://go.dev/doc/tutorial/compile-install) for compiling and running a go project.
 
 ## Random Go Nonsense
 This code can be found in the [random_go_nonsense](random_go_nonsense) directory.</br>
