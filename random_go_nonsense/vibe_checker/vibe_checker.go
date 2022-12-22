@@ -23,8 +23,8 @@ func checkVibe() bool {
 func RunVibeChecker() {
 	var vibe_state_input = "no"
 
-	if len(os.Args) >= 2 {
-		vibe_state_input = os.Args[1]
+	if len(os.Args) >= 3 {
+		vibe_state_input = os.Args[2]
 	}
 	vibe = vibe_state_input == "yes"
 
