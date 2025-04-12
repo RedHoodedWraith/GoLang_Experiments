@@ -4,7 +4,7 @@ By Asami De Almeida
 
 ## Introduction
 
-This was done as part of my upskilling at Loyalty New Zealand.
+This was done as part of my upskilling back when I was at the now defunct *Loyalty New Zealand Ltd*.
 
 Everything in [go_tour] is code from my exercise attempts from *[A Tour of Go](https://go.dev/tour)*.
 
